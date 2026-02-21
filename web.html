@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input Echo App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #00c6ff;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #0072ff;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>User Input Echo App</h2>
+        
+        <input type="text" id="userInput" placeholder="Enter something here">
+        
+        <button onclick="echoInput()">Submit</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function echoInput() {
+            var input = document.getElementById("userInput").value;
+            document.getElementById("output").innerHTML = "You entered: " + input;
+        }
+    </script>
+
+</body>
+</html>
